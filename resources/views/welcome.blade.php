@@ -9,6 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+        <link rel="stylesheet" type="text/css" href="/css/app.css">
+
         <!-- Styles -->
         <style>
             html, body {
@@ -80,7 +82,14 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <h1>Welcome Page</h1>
+
+                @if (session('message'))
+
+                <p>{{ session('message') }}</p>
+
+                @endif
+                {{-- <div class="title m-b-md">
                     Laravel
                 </div>
 
@@ -93,8 +102,13 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                </div> --}}
+
+
             </div>
         </div>
+
+        <<script src="/js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+
     </body>
 </html>
